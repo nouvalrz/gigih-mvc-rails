@@ -24,9 +24,13 @@
     <td><%= link_to "Show this post", post, class: "btn btn-outline-primary" %></td>
   <% else %>
     <td>
-      <div class="d-flex">
-        <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-outline-primary"%>
-        <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-outline-danger ml-2" %>
+      <div class="d-flex align-items-center">
+        <div>   
+          <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-outline-primary"%>
+        </div>
+        <div>
+          <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-outline-danger ml-2" %>
+        </div>    
       </div>
     </td>
   <% end %>
